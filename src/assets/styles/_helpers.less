@@ -1,0 +1,97 @@
+@import "_variable";
+
+._margin {
+  margin: @spacing;
+
+  &-top {
+    margin-top: @spacing;
+  }
+
+  &-right {
+    margin-right: @spacing;
+  }
+
+  &-bottom{
+    margin-bottom: @spacing;
+
+    &-space {
+      margin-bottom: 120px;
+
+      @media (max-width: 770px) {
+        margin-bottom: @spacing;
+      }
+    }
+  }
+
+  &-left {
+    margin-left: @spacing;
+  }
+
+  &-small {
+    margin: @smallSpacing;
+
+    &-top {
+      margin-top: @smallSpacing;
+    }
+
+    &-right {
+      margin-right: @smallSpacing;
+    }
+
+    &-bottom{
+      margin-bottom: @smallSpacing;
+    }
+
+    &-left {
+      margin-left: @smallSpacing;
+    }
+  }
+}
+
+._padding {
+  padding: @spacing;
+
+  &-top {
+    padding-top: @spacing;
+  }
+
+  &-right {
+    padding-right: @spacing;
+  }
+
+  &-bottom{
+    padding-bottom: @spacing;
+  }
+
+  &-left {
+    padding-left: @spacing;
+  }
+
+  &-small {
+    padding: @smallSpacing;
+
+    &-top {
+      padding-top: @smallSpacing;
+    }
+
+    &-right {
+      padding-right: @smallSpacing;
+    }
+
+    &-bottom{
+      padding-bottom: @smallSpacing;
+    }
+
+    &-left {
+      padding-left: @smallSpacing;
+    }
+  }
+}
+
+._flex {
+  &-shrink {
+    &-none {
+      flex-shrink: 0
+    }
+  }
+}

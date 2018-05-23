@@ -1,0 +1,39 @@
+@import "../../assets/styles/_variable";
+
+.list-equipmets {
+
+  .column-right {
+    text-align: right !important;
+  }
+
+  th {
+    background-color: transparent !important;
+  }
+
+  td {
+    &.column-money {
+      opacity: .5;
+    }
+  }
+
+  .ant-select-selection, .ant-select-selection--single, .ant-input-number, input {
+    border: none !important;
+    background-color: transparent !important;
+    width: 150px !important;
+    overflow: hidden;
+  }
+
+  .set-time {
+    &:hover {
+      cursor: pointer;
+      color: @primary-color;
+    }
+  }
+  .ant-table-placeholder {
+    height: 300px;
+    background-image: url("../../assets/images/tomada.png");
+    color: @gray-dark-color;
+    font-size: 22px;
+    
+  }
+}
