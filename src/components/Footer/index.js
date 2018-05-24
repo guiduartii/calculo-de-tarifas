@@ -8,7 +8,7 @@ const Footer = ({ className }) => {
 
   return (
    <footer  className={classStyle}>
-      <p>&copy; Cálculo de Tarifas 2018 - Iniciativa <img src={LogoSenai} alt="Senai SP" className="senai-logo"/> </p>
+      <p>&copy; Cálculo de Tarifas 2018 - Iniciativa <b>SENAI</b> </p>
     </footer>
   )
 };
