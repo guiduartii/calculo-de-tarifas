@@ -5,8 +5,13 @@ import {TweenLite} from 'gsap/TweenLite';
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 import {TimelineMax} from 'gsap/TimelineMax'
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
+import lottie from "lottie-web";
+import * as animationData from "../../assets/js/animationData.json"
 
 function grafismo() {
+
+var anim = lottieInit();
+
 var controller = new ScrollMagic.Controller();
 
 var timeLine = new TimelineMax();
@@ -58,17 +63,40 @@ var scene = new ScrollMagic.Scene({
 .setClassToggle(".grafismo","playing")
 .addTo(controller);
 
+// var timeLine2 = new TimelineMax();
+
+
+// var c1 = new TweenMax.to('.cls-10', 0, () => {
+//     console.log("tst")
+//     anim.play();
+// })
+
  var scene2 = new ScrollMagic.Scene({
      triggerElement: ".content-difference",
-     duration: "50vh",
+     duration: "200vh",
      offset: "-200vh"
  })
- .setPin("#lottie")
  .addIndicators()
- .setTween(timeLine)
+ .on("enter", function () {
+    anim.play();
+ })
  .setClassToggle("#lottie","playing")
  .addTo(controller);
 
 }
 
-window.addEventListener("load", grafismo)
+function lottieInit() {
+    var params = {
+        container: document.getElementById('lottie'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        animationData: animationData
+    };
+    var anim = lottie.loadAnimation(params);
+    return anim;
+}
+
+window.addEventListener("load", () => {
+    grafismo();
+})

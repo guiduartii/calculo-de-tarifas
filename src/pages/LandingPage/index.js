@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Icon, Anchor } from "antd";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/images/LogoLandingPage.png";
+import Logo from "../../assets/images/logo-lumen-white.svg";
 import LogoSenaiNovo from "../../assets/images/senai-logo-new.svg"
 import DrawDifference from "../../assets/images/tarifa.svg";
 import Footer from "../../components/Footer";
