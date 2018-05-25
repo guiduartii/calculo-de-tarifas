@@ -31,18 +31,7 @@ var b5 = new TweenMax.to('#bar-5', 1, {
     transform: "translateX(-60px)"
 })
 
-var b6 = new TweenMax.to('.circle', 1, {
-    // rotation: 45,
-})
-
 var b7 = new TweenMax.to('#traco', 1, {
-    transform: "translateX(30px)"
-})
-
-var b8 = new TweenMax.to('#traco-rotate', 1, {
-})
-
-var b9 = new TweenMax.to('#cirle-2', 0.5, {
     transform: "translateX(30px)"
 })
 
@@ -55,10 +44,7 @@ timeLine.add(b2);
 timeLine.add(b3);
 timeLine.add(b4);
 timeLine.add(b5);
-timeLine.add(b6);
 timeLine.add(b7);
-timeLine.add(b8);
-timeLine.add(b9);
 timeLine.add(b10);
 
 var scene = new ScrollMagic.Scene({
@@ -71,7 +57,18 @@ var scene = new ScrollMagic.Scene({
 .setTween(timeLine)
 .setClassToggle(".grafismo","playing")
 .addTo(controller);
-console.log("loaded")
+
+ var scene2 = new ScrollMagic.Scene({
+     triggerElement: ".content-difference",
+     duration: "50vh",
+     offset: "-200vh"
+ })
+ .setPin("#lottie")
+ .addIndicators()
+ .setTween(timeLine)
+ .setClassToggle("#lottie","playing")
+ .addTo(controller);
+
 }
 
 window.addEventListener("load", grafismo)

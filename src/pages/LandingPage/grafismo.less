@@ -1,3 +1,68 @@
+@keyframes traco-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bar-2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bar-3 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: translateX(0);
+        fill: #f15a24;
+    }
+    25% {
+        transform: translateX(-50px);
+        fill: #f15a24;
+    }
+    50% {
+        transform: translateX(0);
+        fill: #f15a24;
+    }
+    75% {
+        transform: translateX(50px);
+        fill: #f15a24;
+    }
+    100% {
+        transform: translateX(0);
+        fill: #f15a24;
+    }
+}
+
+@keyframes draw-line {
+    from {
+        stroke-dashoffset: 1000;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+}
+
 .grafismo {
     margin-top: 25vh;
     height: 150vh;
@@ -59,6 +124,9 @@
 .cls-8,
 .cls-9 {
     stroke-width: 2px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw-line 10s linear forwards;
 }
 
 .cls-14,
@@ -82,15 +150,6 @@
     fill: #f15a24;
 }
 
-@keyframes traco-rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 #traco-rotate {
     transform-origin: 470px 1112px;
     animation: traco-rotate linear infinite 8s;
@@ -101,3 +160,33 @@
     animation: traco-rotate linear infinite 8s;
 }
 
+#bar-2 {
+    animation: bar-2 linear infinite 3s;
+}
+
+#bar-desce {
+    animation: bar-2 linear infinite 3s;
+}
+
+#bar-sobe {
+    animation: bar-3 linear infinite 3s;
+}
+
+#cirle-2 {
+    animation: circle linear infinite 4s;
+}
+
+#lottie{
+    background-color:#fff;
+    width:100%;
+    height:100%;
+    display:block;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    text-align: center;
+    opacity: 1;
+}
+
+#lottie svg {
+    width: 100%;
+}
