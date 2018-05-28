@@ -7,7 +7,6 @@ import DrawDifference from "../../assets/images/tarifa.svg";
 import Footer from "../../components/Footer";
 import "./landingPage.less";
 import "./grafismo.less";
-import "./lottieAnimation";
 import "./grafismoMagic";
 
 const LinkAnchor = Anchor.Link;
@@ -38,7 +37,7 @@ class LandingPage extends Component {
               </Link>
               <Anchor affix={false}>
                 <LinkAnchor
-                  href="#white-tariff"
+                  href="#diferenca"
                   title={<div className="underlined-button"><span className="link-difference">Qual a diferença entre as tarifas?</span><span className="border-hover"></span></div>}
                 />
               </Anchor>
@@ -48,7 +47,7 @@ class LandingPage extends Component {
             <img src={LogoSenaiNovo} alt="logo do senai" />
           </div>
         </section>
-        <section className="sobre">
+        <section className="sobre" id="diferenca">
           <div className="description">
             <div className="title">
               <h1 className="title-difference">Qual a diferença?</h1>

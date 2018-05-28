@@ -137,6 +137,10 @@
       text-transform: uppercase;
       border: none;
       border-radius: 55px;
+      transition: all 0.6s;
+      &:hover {
+        box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+      }
     }
   }
   .down-arrow {
@@ -227,6 +231,9 @@
       text-transform: uppercase;
       border: none;
       border-radius: 55px;
+      &:hover {
+        box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+      }
     }
   }
 }
@@ -267,6 +274,10 @@
     padding-top: 5%;
     color: @color-text;
     background-color: @bg-card;
+
+    @media (max-width: 1280px) {
+      height: auto;
+    }
 
     .description {
       width: 600px;

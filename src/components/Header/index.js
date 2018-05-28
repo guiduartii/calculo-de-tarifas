@@ -6,9 +6,9 @@ import './header.less';
 const Header = () => {
   return (
     <header className="container header row -justify-content-center _margin">
-      <Link to="/">
+      <div className="logo-header">
         <img src={LogoTipo} alt="Logo Cálculo de Tarifas" className="logo"/>
-      </Link>
+      </div>
     </header>
   )
 };

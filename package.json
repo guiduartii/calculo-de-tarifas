@@ -31,8 +31,6 @@
     "html-webpack-plugin": "2.29.0",
     "imports-loader": "^0.8.0",
     "jest": "20.0.4",
-    "less": "^2.7.3",
-    "less-loader": "^4.0.5",
     "less-vars-to-js": "^1.2.1",
     "lottie-web": "^5.1.15",
     "moment": "^2.20.1",
@@ -106,5 +104,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "less": "^2.7.3",
+    "less-loader": "^4.1.0"
   }
 }
